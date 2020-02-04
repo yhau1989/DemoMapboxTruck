@@ -1,0 +1,22 @@
+
+:root{
+    --companyColorPrimary: #00AE4D;
+    --companyColorFullDark: #0E0C0D;
+    --companyColorSemiDark:#3E3E3E;
+    --companyColorGray : #DDDDDD;
+}
+
+
+.bg-companyColorFullDark
+{
+    background-color: var(--companyColorFullDark);
+}
+
+
+
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;

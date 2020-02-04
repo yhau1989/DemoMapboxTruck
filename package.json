@@ -1,0 +1,24 @@
+{
+  "name": "demomapboxtruck",
+  "version": "1.0.0",
+  "description": "Demo de sitio web para seguimiento de trasnporte en tiempo real.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sptawild": "postcss baseCss.css -o ./DemoSiteDesing/css/site.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhau1989/DemoMapboxTruck.git"
+  },
+  "author": "znameSamuel Pilay Muñoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yhau1989/DemoMapboxTruck/issues"
+  },
+  "homepage": "https://github.com/yhau1989/DemoMapboxTruck#readme",
+  "dependencies": {
+    "postcss": "^7.0.26",
+    "tailwindcss": "^1.1.4"
+  }
+}
