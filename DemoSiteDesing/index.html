@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/site.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
     <title>Company Name</title>
 
 </head>
@@ -42,7 +44,7 @@
 
         <div class="flex items-stretch w-full py-8 px-32">
             <div id="logo" class="flex-1">
-                Logo Companie
+                <img class="w-48 object-fill" src="http://gruposepro.com.ec/images/Logotipo-Grupo-Sepro.png" alt="loco company">
             </div>
             <div id="contactsinfo" class="flex-1">
                 <div class="flex text-sm ">
@@ -183,22 +185,110 @@
     <!-- clients section-->
 
     <div id="services_section" class="w-full px-32 py-24">
-        <h1 class="text-4xl text-center font-bold">Nuestros <span></span> <span class="text-companyColorPrimary">Clientes</span></h1> 
+        <h1 class="text-4xl text-center font-bold">Nuestros <span class="text-companyColorPrimary">Clientes</span></h1> 
         <div class=" ">
             <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1553835973-dec43bfddbeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
             <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1557053964-937650b63311?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
             <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1572094382897-21abe88fb269?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
             <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1529612700005-e35377bf1415?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
-            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://unsplash.com/photos/7DVmV22nieQ" alt="clientes">
+            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1499147231799-a36bdf1ee3dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
             <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="clientes">
             <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1549970604-a784b6ecde02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
-            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://unsplash.com/photos/W73LdE-t8DY" alt="clientes">
-            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="" alt="clientes">
-            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="" alt="clientes">
+            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1553456558-aff63285bdd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
+            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1535990379313-5cd271a2da2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
+            <img class="inline w-48 h-48 rounded object-cover border-2 m-2" src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="clientes">
         </div>
     </div=>
 
     <!-- contact section-->
+
+
+
+   
+
+    <div id="conctact_section" class="w-full px-32 py-24">
+        <h1 class="text-4xl text-center font-bold"><span class="text-companyColorPrimary">Contáctese</span> con nosotros</h1>
+
+        <div class="flex flex-wrap">
+            <div>
+                <div id="map" style="width: 33rem; height: 33rem;"></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoieWhhdTE5ODkiLCJhIjoiY2s2NzB5NHAwMWJzdDNrcXBqc2wwMzA1ZCJ9.1LkayYIdO75pdbqikCiCDQ';
+                    var map = new mapboxgl.Map({
+                        container: 'map', // container id
+                        style: 'mapbox://styles/yhau1989/ck69eov1c0fmo1inxb7c2su9z', // stylesheet location
+                        center: [-79.894, -2.177], // starting position [lng, lat]
+                        zoom: 10.72 // starting zoom
+                    });
+    
+                    map.on('click', function(e) {
+                    var features = map.queryRenderedFeatures(e.point, {
+                        layers: ['grupo-sepro-guayaquil'] // replace this with the name of the layer
+                    });
+    
+                    if (!features.length) {
+                        console.log('features no length property')
+                        return;
+                    }
+    
+                    var feature = features[0];
+                    console.log(feature.properties);
+    
+                    var popup = new mapboxgl.Popup({ offset: [0, -15] })
+                        .setLngLat(feature.geometry.coordinates)
+                        .setHTML('<p class="text-companyColorPrimary font-bold text-sm">' + feature.properties.name + '</p><p>' + feature.properties.address + '</p>')
+                        .addTo(map);
+                    });
+                </script>
+            </div>
+            <div>
+                <form class="w-full max-w-lg ml-4 ">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-companyColorPrimary text-xs font-bold mb-2" for="grid-first-name">
+                          Nombres
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-300 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text">
+                        <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+                      </div>
+                      <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-companyColorPrimary text-xs font-bold mb-2" for="grid-last-name">
+                          Apellidos
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text">
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-companyColorPrimary text-xs font-bold mb-2" for="grid-password">
+                            Dirección de correo electrónico
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="email">
+                        <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-companyColorPrimary text-xs font-bold mb-2" for="grid-password">
+                            Empresa
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" >
+                        <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+                    </div>
+                    </div>
+                   
+                  </form>
+            </div>
+        </div>
+
+
+
+       
+    </div>
+
+   
+
+
 
     <!-- footer section-->
 
