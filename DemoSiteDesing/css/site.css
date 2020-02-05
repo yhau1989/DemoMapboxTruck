@@ -10,6 +10,58 @@
   background-color: var(--companyColorFullDark);
 }
 
+.bg-companyColorFullDark-800
+{
+  background-color: #0e0c0de0;
+}
+
+.bg-companyColorPrimary
+{
+  background-color: var(--companyColorPrimary);
+}
+
+.bg-companyColorSemiDark
+{
+  background-color: var(--companyColorSemiDark);
+}
+
+.bg-companyColorGray
+{
+  background-color: var(--companyColorGray);
+}
+
+.text-companyColorFullDark
+{
+  color: var(--companyColorFullDark);
+}
+
+.text-companyColorPrimary
+{
+  color: var(--companyColorPrimary);
+}
+
+.text-companyColorSemiDark
+{
+  color: var(--companyColorSemiDark);
+}
+
+.text-companyColorGray
+{
+  color: var(--companyColorGray);
+}
+
+#contentSlider{
+  background: linear-gradient(rgba(18, 19, 21, 0.5), rgba(0, 0, 2, 0.48)), var(--image-url) center bottom;
+  background-attachment: fixed;
+}
+
+.gridItems{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  grid-column-gap: 0.38rem;
+  grid-row-gap: 0.38rem;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
