@@ -1,6 +1,6 @@
 :root{
-  /* --companyColorPrimary: #00AE4D; */
-  --companyColorPrimary: #0C579D;
+  /* --companyColorPrimary: #00ae4d; */
+  --companyColorPrimary: #174985;
   --companyColorFullDark: #0E0C0D;
   --companyColorSemiDark:#3E3E3E;
   --companyColorGray : #DDDDDD;
@@ -61,6 +61,10 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   grid-column-gap: 0.38rem;
   grid-row-gap: 0.38rem;
+}
+
+.mapH{
+  height: 40rem;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

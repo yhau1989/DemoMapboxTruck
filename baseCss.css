@@ -1,7 +1,7 @@
 
 :root{
-    /* --companyColorPrimary: #00AE4D; */
-    --companyColorPrimary: #0C579D;
+    /* --companyColorPrimary: #00ae4d; */
+    --companyColorPrimary: #174985;
     --companyColorFullDark: #0E0C0D;
     --companyColorSemiDark:#3E3E3E;
     --companyColorGray : #DDDDDD;
@@ -70,7 +70,9 @@
     grid-row-gap: 0.38rem;
 }
 
-
+.mapH{
+   height: 40rem;
+}
 
 
 
