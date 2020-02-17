@@ -13,8 +13,16 @@
     <title>Company Name - Dashboard</title>
 
     <style>
-        body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .vieMenu{
+            transition: left;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        .menuOcult{
+            left : 0px !important ;
+        }
+
     </style>
 
 </head>
@@ -23,9 +31,10 @@
         <svg id="menuIconDash" class="h-6 w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></svg>
     </div>
     
-    <div id="menuDash" class="hidden w-64 bg-black shadow-xl p-4 absolute z-10">
+    <div id="menuDash" class="vieMenu w-64 bg-black shadow-xl p-4 absolute z-10" style="left : -2000px;">
         <ul class=" text-sm">
-            <li class="text-white hover:bg-blue-600 cursor-pointer p-2">Calendario de Viajes </li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2"> <a href="./dash.html">Dashboard </a></li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2"> <a href="./calendar.html">Calendario de Viajes</a> </li>
             <li class="text-white hover:bg-blue-600 cursor-pointer p-2">Administración de dispocitivos</li>
             <li class="text-white hover:bg-blue-600 cursor-pointer p-2">opcion menu </li>
             <li class="text-white hover:bg-blue-600 cursor-pointer p-2">opcion menu </li>
@@ -40,7 +49,7 @@
         mapboxgl.accessToken = 'pk.eyJ1IjoieWhhdTE5ODkiLCJhIjoiY2s2NzB5NHAwMWJzdDNrcXBqc2wwMzA1ZCJ9.1LkayYIdO75pdbqikCiCDQ';
         var map2 = new mapboxgl.Map({
             container: 'map2', // container id
-            style: 'mapbox://styles/yhau1989/ck69eov1c0fmo1inxb7c2su9z', // stylesheet location
+            style: 'mapbox://styles/yhau1989/ck6qzk86t1sq41io1k5wc7m0s', // stylesheet location
             center: [-79.894, -2.177], // starting position [lng, lat]
             zoom: 10.72 // starting zoom
         });

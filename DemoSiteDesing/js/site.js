@@ -10,7 +10,7 @@ function clickMenuHome()
 function clickMenuDash()
 {
     let m = document.getElementById('menuDash')
-    m.classList.toggle("hidden");
+    m.classList.toggle("menuOcult");
 }
 
 

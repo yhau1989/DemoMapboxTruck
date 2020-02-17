@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Company">
+    <meta name="theme-color" content="#174985">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/site.css">
+    <title>Company Name - Calendar</title>
+
+    <style>
+        .vieMenu{
+            transition: left;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        .menuOcult{
+            left : 0px !important ;
+        }
+
+    </style>
+
+</head>
+<body class="bg-gray-200 w-full">
+    <div class="bg-black w-full text-right text-white py-2 px-4">
+        <svg id="menuIconDash" class="h-6 w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></svg>
+    </div>
+    
+    <div id="menuDash" class="vieMenu w-64 bg-black shadow-xl p-4 absolute z-10" style="left : -2000px;">
+        <ul class=" text-sm">
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2"> <a href="./dash.html">Dashboard</a></li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2"> <a href="./calendar.html">Calendario de Viajes</a></li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2">Administración de dispocitivos</li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2">opcion menu </li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2">opcion menu </li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2">opcion menu </li>
+            <li class="text-white hover:bg-blue-600 cursor-pointer p-2"><a href="./index.html">Salir →</a></li>
+        </ul>
+    </div>
+
+    <div class="bg-gray-200 p-8 w-full">
+
+
+        
+            <table class="table-auto w-full bg-white rounded-t-lg shadow-xl rounded-sm">
+                <thead class=" text-companyColorPrimary text-sm bg-gray-300" >
+                  <tr class=" uppercase">
+                    <th class="rounded-tl-lg px-4 py-2">status</th>
+                    <th class="px-4 py-2 text-left">Transporte</th>
+                    <th class="px-4 py-2 text-left">Origen</th>
+                    <th class="px-4 py-2 text-left">Destino</th>
+                    <th class="px-4 py-2 text-left">Conductor</th>
+                    <th class="rounded-tr-lg px-4 py-2 text-left">Camion</th>
+
+                  </tr>
+                </thead>
+                <tbody class="text-sm text-gray-900">
+                  <tr>
+                    <td class="px-4 py-2 text-center">
+                        <span class=" uppercase p-1 bg-yellow-300 text-yellow-900 font-semibold text-xs rounded-full">pendiente</span>
+                    </td>
+                    <td class="px-4 py-2">
+                        Transporte de carnes y bebidas
+                        <p class=" block">
+                            <span class="inline text-gray-600 text-xs mr-3"><strong>Cliente:</strong> Del Portal</span>
+                            <span class="inline text-gray-600 text-xs mr-3"><strong>Telf:</strong> 0959556489</span>
+                            <span class="inline text-blue-600 text-xs mr-3 bg-blue-200 px-1 rounded-full"><a href="mailto:yhau1989@gmail.com">yhau1989@gmail.com</a></span>
+                        </p>
+                    </td>
+                    <td class="px-4 py-2">
+                        Puerto de Guayaquil
+                        <span class="block text-gray-500 text-xs"><strong>hora:</strong> 19:00</span>
+                    </td>
+                    <td class="px-4 py-2">Salinas (Chipipe)
+                        <span class="block text-gray-500 text-xs"><strong>hora:</strong> 23:00</span>
+                    </td>
+                    <td class="px-4 py-2">Samuel Pilay Muñoz</td>
+                    <td class="px-4 py-2">GTM-536</td>
+                  </tr>
+                  <tr class="border-t">
+                    <span class=" uppercase p-1 bg-red-300 text-red-900 font-semibold text-xs rounded-full">pendiente</span>
+                    <td class="px-4 py-2">A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact on Design</td>
+                    <td class="px-4 py-2">Adam</td>
+                    <td class="px-4 py-2">112</td>
+                    <td class="px-4 py-2">858</td>
+                    <td class="px-4 py-2">858</td>
+                  </tr>
+                  <tr class="border-t rounded-bl-lg" >
+                    <td class="px-4 py-2">asdasdas</td>
+                    <td class="px-4 py-2 rounded-bl-lg" style="background-color: aquamarin;">Intro to JavaScript</td>
+                    <td class="px-4 py-2">Chris</td>
+                    <td class="px-4 py-2">1,280</td>
+                    <td class="px-4 py-2">858</td>
+                    <td class="px-4 py-2 rounded-bl-lg">858</td>
+                  </tr>
+
+                </tbody>
+              </table>
+        
+
+        
+
+
+    </div>
+
+
+
+    
+
+
+    <script src="./js/site.js"></script>
+</body>
+</html>
