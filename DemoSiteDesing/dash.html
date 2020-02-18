@@ -28,7 +28,7 @@
 </head>
 <body class="bg-gray-300 w-full">
     <div class="bg-black w-full text-right text-white py-2 px-4">
-        <svg id="menuIconDash" class="h-6 w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></svg>
+        <svg id="menuIconDash" class="h-6 w-6 text-white fill-current cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></svg>
     </div>
     
     <div id="menuDash" class="vieMenu w-64 bg-black shadow-xl p-4 absolute z-10" style="left : -2000px;">
@@ -43,6 +43,9 @@
         </ul>
     </div>
 
+
+    
+
     <div class="h-screen">
         <div id="map2" style="height: 100%; width: 100%;"></div>
     <script>
@@ -54,9 +57,40 @@
             zoom: 10.72 // starting zoom
         });
 
+        map2.on('click', function(e) {
+        var features = map2.queryRenderedFeatures(e.point, {
+            layers: ['camiones-grupo-sepro-demo (1)'] // replace this with the name of the layer
+        });
+
+
+        if (!features.length) {
+            return;
+        }
+
+        var feature = features[0];
+
+        console.log(feature.geometry.coordinates);
         
+        let info = "";
+        for (const prop in feature.properties) {
+            // console.log(`obj.${prop} = ${feature.properties[prop]}`);
+             info += `<p class="block text-xs "><span class="text-companyColorPrimary font-bold">${prop}</span>: ${feature.properties[prop]}</p>`;
+            }
+
+        var popup = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat(feature.geometry.coordinates[0])
+        .setHTML(info)
+        .addTo(map2);
+
+        });
+
     </script>
     </div>
+
+
+
+    
+
     
 
 

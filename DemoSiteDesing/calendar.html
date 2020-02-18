@@ -26,7 +26,7 @@
 </head>
 <body class="bg-gray-200 w-full">
     <div class="bg-black w-full text-right text-white py-2 px-4">
-        <svg id="menuIconDash" class="h-6 w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></svg>
+        <svg id="menuIconDash" class="h-6 w-6 text-white fill-current cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></svg>
     </div>
     
     <div id="menuDash" class="vieMenu w-64 bg-black shadow-xl p-4 absolute z-10" style="left : -2000px;">
@@ -43,11 +43,14 @@
 
     <div class="bg-gray-200 p-8 w-full">
 
-
+            <h1 class="text-2xl font-bold text-companyColorPrimary py-4">
+                Rutas del día
+                <span class="block text-sm">2020-02-18</span>
+            </h1>
         
             <table class="table-auto w-full bg-white rounded-t-lg shadow-xl rounded-sm">
                 <thead class=" text-companyColorPrimary text-sm bg-gray-300" >
-                  <tr class=" uppercase">
+                  <tr class="uppercase">
                     <th class="rounded-tl-lg px-4 py-2">status</th>
                     <th class="px-4 py-2 text-left">Transporte</th>
                     <th class="px-4 py-2 text-left">Origen</th>
@@ -60,7 +63,7 @@
                 <tbody class="text-sm text-gray-900">
                   <tr>
                     <td class="px-4 py-2 text-center">
-                        <span class=" uppercase p-1 bg-yellow-300 text-yellow-900 font-semibold text-xs rounded-full">pendiente</span>
+                        <span class=" px-2 py-1 bg-red-300 text-red-900 font-bold text-xs rounded-full">Cancelado</span>
                     </td>
                     <td class="px-4 py-2">
                         Transporte de carnes y bebidas
@@ -81,20 +84,51 @@
                     <td class="px-4 py-2">GTM-536</td>
                   </tr>
                   <tr class="border-t">
-                    <span class=" uppercase p-1 bg-red-300 text-red-900 font-semibold text-xs rounded-full">pendiente</span>
-                    <td class="px-4 py-2">A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact on Design</td>
-                    <td class="px-4 py-2">Adam</td>
-                    <td class="px-4 py-2">112</td>
-                    <td class="px-4 py-2">858</td>
-                    <td class="px-4 py-2">858</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class=" px-2 py-1  bg-yellow-300 text-yellow-900 font-bold text-xs rounded-full">Pendiente</span>
+                    </td>
+                    <td class="px-4 py-2">
+                        Transporte de 2 contariner de 40 con Muebles
+                        <p class=" block">
+                            <span class="inline text-gray-600 text-xs mr-3"><strong>Cliente:</strong> Almacenes Boyaca</span>
+                            <span class="inline text-gray-600 text-xs mr-3"><strong>Telf:</strong> 999999999</span>
+                            <span class="inline text-blue-600 text-xs mr-3 bg-blue-200 px-1 rounded-full"><a href="mailto:yhau1989@gmail.com">logistica@boyaca.com</a></span>
+                        </p>
+                    </td>
+
+                    <td class="px-4 py-2">
+                        Aereopuerto Tababela (QUI)
+                        <span class="block text-gray-500 text-xs"><strong>hora:</strong> 18:00</span>
+                    </td>
+                    <td class="px-4 py-2">
+                        Boyaca y 10 de Agosto (GYE)
+                        <span class="block text-gray-500 text-xs"><strong>hora:</strong> 00:00</span>
+                    </td>
+                    <td class="px-4 py-2">Emanuel Ramirez</td>
+                    <td class="px-4 py-2">GTM-520</td>
                   </tr>
                   <tr class="border-t rounded-bl-lg" >
-                    <td class="px-4 py-2">asdasdas</td>
-                    <td class="px-4 py-2 rounded-bl-lg" style="background-color: aquamarin;">Intro to JavaScript</td>
-                    <td class="px-4 py-2">Chris</td>
-                    <td class="px-4 py-2">1,280</td>
-                    <td class="px-4 py-2">858</td>
-                    <td class="px-4 py-2 rounded-bl-lg">858</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class=" px-2 py-1  bg-green-300 text-green-900 font-bold text-xs rounded-full">Finalizado</span>
+                    </td>
+                    <td class="px-4 py-2 rounded-bl-lg" style="background-color: aquamarin;">
+                        Transporte de calzado, 4 containers de 60
+                        <p class=" block">
+                            <span class="inline text-gray-600 text-xs mr-3"><strong>Cliente:</strong> Almacenes De Prati</span>
+                            <span class="inline text-gray-600 text-xs mr-3"><strong>Telf:</strong> 5252525252</span>
+                            <span class="inline text-blue-600 text-xs mr-3 bg-blue-200 px-1 rounded-full"><a href="mailto:yhau1989@gmail.com">logistica@deprati.com.ec</a></span>
+                        </p>
+                    </td>
+                    <td class="px-4 py-2">
+                        20 de Mayo y Guayaquil (CUENCA)
+                        <span class="block text-gray-500 text-xs"><strong>hora:</strong> 07:00</span>
+                    </td>
+                    <td class="px-4 py-2">
+                        Centro de Distribución (GYE)
+                        <span class="block text-gray-500 text-xs"><strong>hora:</strong> 22:00</span>
+                    </td>
+                    <td class="px-4 py-2">Erika Ramos</td>
+                    <td class="px-4 py-2 rounded-bl-lg">GTM-4568</td>
                   </tr>
 
                 </tbody>
